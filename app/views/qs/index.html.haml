@@ -1,13 +1,17 @@
 = form_for Q.new do |f|
-  %div
+  .top
     = f.text_area :text, size: '80x3'
-  %div
-    Please translate this to
-    = f.select :to, Q.to.options
+  .bottom
+    .to
+      Please translate this to
+      = f.select :to, Q.to.options
     = f.submit 'Create'
 
-%ul
+%ul.qs
   - @qs.each do |q|
-    %li= link_to q.text, q_path(q)
+    %li
+      .text= link_to q.text, q_path(q)
+      .to → #{q.to_text}
+      .count= link_to "", q_path(q, anchor: 'disqus_thread')
 
 = paginate @qs

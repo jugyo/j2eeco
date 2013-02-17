@@ -1,18 +1,60 @@
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 6px;
+}
 
+.new_q {
+  textarea {
+    width: 99%;
+  }
+  .to {
+    display: inline-block;
+    color: #999;
+  }
+  .bottom {
+    text-align: right;
+  }
+}
 
 .q {
-  margin: 8px 0;
+  margin: 24px 0;
 
   .text {
-    font-size: 110%;
-    margin: 4px 0;
-    padding: 8px;
-    border: solid 1px #CCC;
-    border-radius: 4px;
+    margin: 24px 0;
+    font-size: 140%;
   }
 
   .to {
-    font-size: 90%;
-    color: #666;
+    color: #999;
+  }
+}
+
+#disqus_thread {
+  margin: 8px 0;
+}
+
+ul.qs {
+  margin: 8px 0;
+  padding: 0;
+  li {
+    margin: 24px 0;
+    list-style: none;
+    .text {
+      font-size: 120%;
+      display: inline-block;
+    }
+    .to {
+      display: inline-block;
+      color: #999;
+    }
+    .count {
+      min-height: 1.2em;
+      a {
+        font-size: 76%;
+        color: #999;
+      }
+    }
   }
 }

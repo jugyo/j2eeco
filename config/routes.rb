@@ -50,6 +50,7 @@ Tc::Application.routes.draw do
   # just remember to delete public/index.html.
   root :to => 'qs#index'
   resources :qs, only: [:show, :create], :path => :q
+  get 'rss' => 'qs#index', format: :rss, as: 'qs_rss'
 
   # See how all your routes lay out with "rake routes"
 

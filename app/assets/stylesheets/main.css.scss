@@ -5,6 +5,28 @@ body {
   padding: 6px;
 }
 
+h1 {
+  font-size: 200%;
+  margin: 0;
+  color: #EEE;
+  a.rss {
+    font-size: 60%;
+    font-weight: normal;
+  }
+}
+
+a:link {
+  color: #000;
+}
+
+a:visited, a:hover, a:active {
+  color: #666;
+}
+
+.contents {
+  margin: 24px 0;
+}
+
 .new_q {
   textarea {
     width: 99%;

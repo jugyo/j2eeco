@@ -6,8 +6,12 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    %h1= link_to 'j2ee.co', root_path
+    %h1
+      = link_to 'j2ee.co', root_path
+      |
+      = link_to 'rss', qs_rss_path, class: 'rss'
 
-    = yield
+    .contents
+      = yield
 
     = render 'shared/disqus_count'

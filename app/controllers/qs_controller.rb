@@ -1,6 +1,6 @@
 class QsController < ApplicationController
   def index
-    @qs = Q.recent.page params[:page]
+    @qs = Q.recent.page(params[:page]).per(20)
   end
 
   def show

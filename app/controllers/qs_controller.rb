@@ -9,10 +9,11 @@ class QsController < ApplicationController
 
   def create
     q = Q.create(params[:q])
-    unless q.save
+    if q.save
+      redirect_to q_path(q)
+    else
       flash[:error] = 'failed to create'
+      redirect_to root_path
     end
-
-    redirect_to q_path(q)
   end
 end

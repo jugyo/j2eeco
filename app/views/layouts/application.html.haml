@@ -13,20 +13,22 @@
     %meta(content="yes" name="apple-mobile-web-app-capable")/
   %body
     %h1
-      = link_to 'j2ee.co', root_path
+      = link_to 'J2EE.CO', root_path
+      .tagline
+        WE TRANSLATE
     .menu
       = link_to '@j2eeco', 'https://twitter.com/j2eeco'
       |
-      = link_to 'rss', qs_rss_path, class: 'rss'
+      = link_to 'RSS', qs_rss_path, class: 'rss'
 
     .contents
       = yield
 
     .footer
-      Need growth *idea* and cool *design*
+      NEED GROWTH *IDEA* AND COOL *DESIGN*
       |
-      = link_to 'contribute', 'https://github.com/jugyo/tc'
+      = link_to 'CONTRIBUTE', 'https://github.com/jugyo/tc'
       |
-      = link_to 'issues', 'https://github.com/jugyo/tc/issues'
+      = link_to 'ISSUES', 'https://github.com/jugyo/tc/issues'
 
     = render 'shared/disqus_count'

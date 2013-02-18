@@ -5,4 +5,6 @@ class Q < ActiveRecord::Base
   enumerize :to, in: [:en, :ja]
 
   scope :recent, ->() { order('created_at desc') }
+
+  after_create ->(q) { TweetWorker.perform_async(q.id) }
 end

@@ -1,6 +1,7 @@
 # encoding: utf-8
 class TweetWorker
   include Sidekiq::Worker
+  include TC::Twitter
 
   def perform(q_id)
     q    = Q.find(q_id)
@@ -9,12 +10,5 @@ class TweetWorker
     url  = "http://#{Settings.url_options.host}/q/#{q.id}"
     twitter.update "#{text} #{url}" if Rails.env.production?
     logger.info "Tweet: " + "'#{text} #{url}'"
-  end
-
-  def twitter
-    @twitter ||= Twitter::Client.new(
-      oauth_token: Settings.twitter.user.token,
-      oauth_token_secret: Settings.twitter.user.secret
-    )
   end
 end

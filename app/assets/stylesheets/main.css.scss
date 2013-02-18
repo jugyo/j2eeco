@@ -33,7 +33,11 @@ a:visited, a:hover, a:active {
 
 .new_q {
   textarea {
-    width: 99%;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  input {
+    margin: 0;
   }
   .to {
     display: inline-block;

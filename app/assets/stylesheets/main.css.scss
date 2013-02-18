@@ -38,6 +38,10 @@ a:visited, a:hover, a:active {
   .to {
     display: inline-block;
     color: #999;
+    .hint {
+      display: inline-block;
+      font-size: 80%;
+    }
   }
   .bottom {
     text-align: right;

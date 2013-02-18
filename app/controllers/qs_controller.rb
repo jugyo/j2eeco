@@ -13,6 +13,6 @@ class QsController < ApplicationController
       flash[:error] = 'failed to create'
     end
 
-    redirect_to root_path
+    redirect_to q_path(q)
   end
 end

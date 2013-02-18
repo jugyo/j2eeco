@@ -21,6 +21,10 @@
       |
       = link_to 'RSS', qs_rss_path, class: 'rss'
 
+    - if flash[:notice]
+      .notice
+        = flash[:notice]
+
     .contents
       = yield
 

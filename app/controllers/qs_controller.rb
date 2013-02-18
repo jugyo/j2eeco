@@ -1,3 +1,4 @@
+# encoding: utf-8
 class QsController < ApplicationController
   def index
     @qs = Q.recent.page(params[:page]).per(20)
@@ -12,8 +13,7 @@ class QsController < ApplicationController
     if q.save
       redirect_to q_path(q)
     else
-      flash[:error] = 'failed to create'
-      redirect_to root_path
+      redirect_to root_path, notice: 'エラー \(^o^)/'
     end
   end
 end

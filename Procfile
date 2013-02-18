@@ -1,2 +1,2 @@
-web: bundle exec unicorn -c unicorn.conf
-worker: bundle exec sidekiq
+web: RAILS_ENV=production bundle exec unicorn -c config/unicorn.conf
+worker: RAILS_ENV=production bundle exec sidekiq

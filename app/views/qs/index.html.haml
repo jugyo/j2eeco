@@ -11,7 +11,7 @@
   - @qs.each do |q|
     %li
       .text= link_to q.text, q_path(q)
-      .to → #{q.to_text}
+      .to → #{q.to}
       .count= link_to "", q_path(q, anchor: 'disqus_thread')
 
 = paginate @qs

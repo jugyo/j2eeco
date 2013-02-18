@@ -24,6 +24,8 @@ gem 'rspec-rails'
 gem 'haml-rails'
 gem 'kaminari'
 gem 'enumerize'
+gem 'foreman'
+gem 'unicorn'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

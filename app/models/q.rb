@@ -7,4 +7,6 @@ class Q < ActiveRecord::Base
   scope :recent, ->() { order('created_at desc') }
 
   after_create ->(q) { TweetWorker.perform_async(q.id) }
+
+  validates :text, length: {maximum: 140}
 end
